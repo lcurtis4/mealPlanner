@@ -36,6 +36,7 @@ const items = [
     }
 ]
 
+// Adds "id" property to each "item" passed through the function, then puts the "item" in the "items" array. 
 const addToShoppingList = (item) => {
     const lastIndex = items.length - 1 
     if (lastIndex === -1) {
@@ -49,6 +50,7 @@ const addToShoppingList = (item) => {
     items.push(item)
 }
 
+// initial instance of an "item" 
 const chicken = {
     name: "chicken",
     price: 9,
@@ -57,6 +59,7 @@ const chicken = {
 }
 addToShoppingList(chicken)
 
+// filters through "items" array and logs each "item" over $8
 for (const item of items) {
     if (item.price >= 8) {
         console.log(item)
